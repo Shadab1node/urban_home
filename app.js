@@ -2,7 +2,7 @@ require('dotenv').config();
 let express = require("express");
 var path = require("path")
 let bodyParser = require("body-parser");
-require("./Config/database")
+require("./config/database")
 const twilio = require('twilio');
 const cors = require("cors");
 let app = express();
