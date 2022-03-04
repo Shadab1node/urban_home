@@ -24,9 +24,7 @@ exports.userOtp = async (req, res) => {
     try {
         const statecode = "+91";
         const number = req.body.number;
-        const OTP = otpGenerator.generate(5, {
-            digits: false
-        });
+        const OTP = Math.floor(1000 + Math.random() * 9000)
         let user = await User.findOne({
             number: `${statecode}${number}`
 
